@@ -11,6 +11,7 @@ sys.path.append("/home/seungjin/webapps/c.seungjin.net/project")
 
 os.environ['DJANGO_SETTINGS_MODULE'] = 'settings'
 
-import django.core.handlers.wsgi  
+import django.core.handlers.wsgi
 
 application = django.core.handlers.wsgi.WSGIHandler() 
+
