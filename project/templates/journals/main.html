@@ -10,16 +10,16 @@
  <meta name="date" content="{{ current_time }}">
  <meta name="author" content="Kim, Seung-jin">
  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes" />
- <link href="/site_media/journals/styles/update.css" rel="stylesheet" type="text/css">
+ <link href="/site_media/journals/styles/main.css" rel="stylesheet" type="text/css">
  <script type="text/javascript" src="/site_media/journals/scripts/jquery-1.4.2.min.js"></script>
- <script type="text/javascript" src="/site_media/journals/scripts/update.js"></script>
+ <script type="text/javascript" src="/site_media/journals/scripts/main.js"></script>
 </head>
 <body>
 	{% for journal in journals %}
 		<div id="journal">
-		<div id="date">{{ journal.date }}</div> <div id="time">{{ journal.time }}</div> <div id="timezone">{{ journal.timezone }}</div>
-		<div id="tag">[{{ journal.tag }}]</div>
-		<div id="subject">{{ journal.subject }}</div>
+		{{ journal.subject }}<br/>
+		{{ journal.date }} {{ journal.time }} {{ journal.timezone }}<br/>
+		{{ journal.tag }}
 		</div>
 	{% endfor %}
 </body>
