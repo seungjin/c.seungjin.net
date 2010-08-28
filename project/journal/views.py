@@ -29,4 +29,6 @@ def view_with_id(request, id):
   return HttpResponse(output)
 
 def post(request):
-  pass
+  return HttpResponse("-")
+  
+  
