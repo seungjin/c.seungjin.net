@@ -9,7 +9,7 @@ from time import gmtime, strftime
 from journals.models import *
 
 def main(request):
-  journals = Journals.objects.order_by('-id').all()
+  journals = Journals.objects.filter(publishing_code=1).order_by('-id').all()
   variables = Context({
     'current_time' : strftime("%a, %d %b %Y %H:%M:%S +0000", gmtime()),
     'journals' : journals
