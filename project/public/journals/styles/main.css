@@ -22,7 +22,6 @@ body
 	margin-bottom: 0px;
 }
 
-
 #line
 {
 	width: 100%;
@@ -31,53 +30,18 @@ body
 	height: 2px;
 }
 
-#journals
-{
-	margin-top: 3px;
-	margin-bottom: 3px;
-	margin-left:0%; 						
-	margin-right:0%;
-}
+
 
 #journal
 {
-	margin-top: 6px;
-	margin-bottom: 7px;
-	position: relatives;
-	
-}
-
-#subject
-{
-	
-}
-
-#ref
-{
-	
-}
-
-#date
-{
-	float: left;
-	margin-right: 3px;
-}
-
-#time
-{
-	float: left;
-	margin-right: 3px;
-}
-
-#timezone
-{
-	float: left;
-	margin-right: 4px;
-}
-
-#tag
-{	
-	margin-right: 3px;
+	background:#F4F5F7 3px 3px no-repeat;
+	border:1px dashed #CCC;
+	padding:8px 8px 8px 8px;
+	margin:5px 0;
+  line-height:120%;
+  font-size: 100%;
+	/*white-space: pre;*/
+	word-wrap: break-word;
 }
 
 #read_order_updates
@@ -107,6 +71,18 @@ body
 {
 	
 }
+
+block {
+	background:#F4F5F7 3px 3px no-repeat;
+	border:1px dashed #CCC;
+	padding:8px 8px 8px 8px;
+	margin:5px 0;
+  line-height:120%;
+  font-size: 100%;
+	white-space: pre;
+	word-wrap: break-word;
+}
+
 
 #footer
 {

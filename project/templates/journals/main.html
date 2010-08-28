@@ -17,9 +17,9 @@
 <body>
 	{% for journal in journals %}
 		<div id="journal">
-		<div id="date">{{ journal.date }}</div> <div id="time">{{ journal.time }}</div> <div id="timezone">{{ journal.timezone }}</div>
-		<div id="tag">[{{ journal.tag }}]</div>
-		<div id="subject">{{ journal.subject }}</div>
+		{{ journal.subject }}<br/>
+		{{ journal.date }} {{ journal.time }} {{ journal.timezone }}<br/>
+		{{ journal.tag }}
 		</div>
 	{% endfor %}
 </body>

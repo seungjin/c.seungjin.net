@@ -28,7 +28,7 @@ urlpatterns = patterns('',
     (r'^favicon\.gif$', 'django.views.generic.simple.redirect_to', {'url': '/site_media/favicon.gif'}),
     
     (r'^$', main),
-    (r'^journals$', main),
+    (r'^journal$', main),
     (r'^site_media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': site_media,'show_indexes': True}),
 )
 
