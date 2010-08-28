@@ -1,5 +1,4 @@
 .DS_Store
+*.puc
 **.pyc
-*.pyc
-**/**.pyc
 project/settings.py
