@@ -23,8 +23,8 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     #(r'^admin/', include(admin.site.urls)),
     
-    (r'^favicon\.ico$', 'django.views.generic.simple.redirect_to', {'url': '/site_media/favicon.ico'}),
-    (r'^robots\.txt$', 'django.views.generic.simple.redirect_to', {'url': '/site_media/robots.txt'}),
+    (r'^favicon.ico$', 'django.views.generic.simple.redirect_to', {'url': '/site_media/favicon.ico'}),
+    (r'^robots.txt$', 'django.views.generic.simple.redirect_to', {'url': '/site_media/robots.txt'}),
     
     (r'^$', main),
     (r'^journals$', main),
