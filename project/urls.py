@@ -4,7 +4,13 @@ from django.conf.urls.defaults import *
 # from django.contrib import admin
 # admin.autodiscover()
 
+import os
+
+from django.conf import settings
+
 from journals.views import *
+
+site_media = os.path.join( os.path.dirname(__file__), 'site_media')
 
 urlpatterns = patterns('',
     # Example:
@@ -19,4 +25,6 @@ urlpatterns = patterns('',
     
     (r'^$', main),
     (r'^journals$', main),
+    (r'^site_media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': site_media,'show_indexes': True}),
 )
+
