@@ -1,4 +1,4 @@
-#!/home/seungjin/webapps/c.seungjin.net/bin/python
+#!/home/seungjin/opt/python-2.5.5/bin/python
 from django.core import management
 
 if __name__ == "__main__":
