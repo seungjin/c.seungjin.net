@@ -26,9 +26,10 @@ urlpatterns = patterns('',
     (r'^robots\.txt$', 'django.views.generic.simple.direct_to_template', {'template': 'robots.txt', 'mimetype': 'text/plain'}),
     (r'^favicon\.ico$', 'django.views.generic.simple.redirect_to', {'url': '/site_media/favicon.ico'}),
     (r'^favicon\.gif$', 'django.views.generic.simple.redirect_to', {'url': '/site_media/favicon.gif'}),
+    (r'^site_media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': site_media,'show_indexes': True}),
     
     (r'^$', main),
     (r'^journal$', main),
-    (r'^site_media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': site_media,'show_indexes': True}),
+    (r'^journal$', main),
 )
 
