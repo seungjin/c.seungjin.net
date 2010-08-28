@@ -10,11 +10,16 @@
  <meta name="date" content="{{ current_time }}">
  <meta name="author" content="Kim, Seung-jin">
  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes" />
- <link href="/site_media/journals/styles/main.css" rel="stylesheet" type="text/css">
- <script type="text/javascript" src="/site_media/journals/scripts/jquery-1.4.2.min.js"></script>
- <script type="text/javascript" src="/site_media/journals/scripts/main.js"></script>
+ <link href="/site_media/journal/styles/main.css" rel="stylesheet" type="text/css">
+ <script type="text/javascript" src="/site_media/journal/scripts/jquery-1.4.2.min.js"></script>
+ <script type="text/javascript" src="/site_media/journal/scripts/main.js"></script>
 </head>
 <body>
+	<div id='header'>
+	  <img src='/site_media/journal/images/seungjin.net.small.white.png' />
+    <img src='/site_media/journal/images/ribbon.png' height=22 />
+    <div id ='line'><hr/></div>
+	</div>
 	{% for journal in journals %}
 		<div id="journal">
 		{{ journal.subject }}<br/>
@@ -22,5 +27,8 @@
 		{{ journal.tag }}
 		</div>
 	{% endfor %}
+	<div id="footer">
+		<div id="bottom_line"><hr/></div>
+	</div>
 </body>
 </html>

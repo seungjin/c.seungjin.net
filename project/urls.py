@@ -29,7 +29,14 @@ urlpatterns = patterns('',
     (r'^site_media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': site_media,'show_indexes': True}),
     
     (r'^$', main),
+    
+    # journal
     (r'^journal$', main),
     (r'^journal/(?P<id>\d+)/$', view_with_id),
+    
+    # post
+    (r'^post/journal$', post),
+    
+    
 )
 
