@@ -30,13 +30,12 @@ urlpatterns = patterns('',
     
     (r'^$', main),
     
-    # journal
+    # journal:
     (r'^journal$', main),
     (r'^journal/(?P<id>\d+)/$', view_with_id),
     
-    # post
+    # post:
     (r'^post/journal$', post),
-    
     
 )
 
