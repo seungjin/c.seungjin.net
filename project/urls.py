@@ -25,6 +25,7 @@ urlpatterns = patterns('',
     
     (r'^robots\.txt$', 'django.views.generic.simple.direct_to_template', {'template': 'robots.txt', 'mimetype': 'text/plain'}),
     (r'^favicon\.ico$', 'django.views.generic.simple.redirect_to', {'url': '/site_media/favicon.ico'}),
+    (r'^favicon\.gif$', 'django.views.generic.simple.redirect_to', {'url': '/site_media/favicon.gif'}),
     
     (r'^$', main),
     (r'^journals$', main),
