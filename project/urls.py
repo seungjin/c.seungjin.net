@@ -4,6 +4,8 @@ from django.conf.urls.defaults import *
 # from django.contrib import admin
 # admin.autodiscover()
 
+from journals.views import *
+
 urlpatterns = patterns('',
     # Example:
     # (r'^project/', include('project.foo.urls')),
@@ -13,5 +15,8 @@ urlpatterns = patterns('',
     # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
-    # (r'^admin/', include(admin.site.urls)),
+    #(r'^admin/', include(admin.site.urls)),
+    
+    (r'^$', main),
+    (r'^journals$', main),
 )
