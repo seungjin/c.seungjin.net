@@ -10,7 +10,7 @@ from django.conf import settings
 
 from journals.views import *
 
-site_media = os.path.join( os.path.dirname(__file__), 'site_media')
+site_media = os.path.join( os.path.dirname(__file__), 'public')
 
 urlpatterns = patterns('',
     # Example:
