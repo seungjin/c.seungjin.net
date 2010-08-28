@@ -27,3 +27,6 @@ def view_with_id(request, id):
   template = get_template('journal/view_with_id.html')
   output = template.render(variables)
   return HttpResponse(output)
+
+def post(request):
+  pass
