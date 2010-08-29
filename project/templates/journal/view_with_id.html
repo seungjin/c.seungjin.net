@@ -15,6 +15,11 @@
  <script type="text/javascript" src="/site_media/journal/scripts/main.js"></script>
 </head>
 <body>
+	<div id='header'>
+	  <img src='/site_media/journal/images/seungjin.net.small.white.png' />
+    <img src='/site_media/journal/images/ribbon.png' height=22 />
+    <div id ='line'><hr/></div>
+	</div>
 	{% for journal in journals %}
 		<div id="journal">
 		{{ journal.subject }}<br/>
@@ -24,5 +29,8 @@
 		{{ journal.tag }}
 		</div>
 	{% endfor %}
+	<div id="footer">
+		<div id="bottom_line"><hr/></div>
+	</div>
 </body>
 </html>
