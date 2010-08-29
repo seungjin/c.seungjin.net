@@ -32,7 +32,7 @@ urlpatterns = patterns('',
     (r'^site_media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': site_media}),
 
     (r'^$', recent100),
-
+    (r'^journal/recent$', recent100),
     (r'^journal/recent/100$', recent100),
     (r'^journal/all$', all),
     (r'^journal$', all),
