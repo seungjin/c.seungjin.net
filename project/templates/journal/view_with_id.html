@@ -22,25 +22,14 @@
 	</div>
 	{% for journal in journals %}
 		<div id="journal">
-		{{ journal.subject }}<br/><br/>
+		{{ journal.subject }}
 		{% if journal.body != None %}
-			{{ journal.body }}<br/><br/>
+			{{ journal.body }}
 		{% endif %}
-		{% if journal.body != None %}
-			{{ journal.ref }}<br/><br>
+		{% if journal.ref != None %}
+			{{ journal.ref }}
 		{% endif %}
-		{% if journal.date != None %}
-			{{ journal.date }}
-		{% endif %}
-		{% if journal.time != None %}
-			{{ journal.time }}
-		{% endif %}
-		{% if journal.timezone != None %}
-			{{ journal.timezone }}
-		{% endif %}
-		{% if journal.tag != None %}
-			[{{ journal.tag }}]<br/>
-		{% endif %}
+		{% if journal.date != None %}{{ journal.date }}{% endif %} {% if journal.time != None %}{{ journal.time }}{% endif %} {% if journal.timezone != None %} {{ journal.timezone }}{% endif %} {% if journal.tag != None %}[{{ journal.tag }}]{% endif %}
 		<a href="/journal">Journal list</a>
 		</div>
 	{% endfor %}
