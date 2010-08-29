@@ -21,7 +21,7 @@
 	{% for journal in journals %}
 		<div id="journal">"{{ journal.subject }}"
 		{% if journal.body != None %}<br/>{{ journal.body }}{% endif %}
-		{% if journal.ref != None %}<br/>{{ journal.ref }}{% endif %}
+		{% if journal.ref != None %}<br/><a href="{{ journal.ref }}">{{ journal.ref }}</a><br/>{% endif %}
 		{% if journal.date != None %}{{ journal.date }}{% endif %} {% if journal.time != None %}{{ journal.time_with_min_sec }}{% endif %} {% if journal.timezone != None %} {{ journal.timezone }}{% endif %} {% if journal.tag != None %}[{{ journal.tag }}]{% endif %}
 		<a href="/journal/recent/100">Recent 100 journals</a>
 		<a href="/journal/all">All journal list</a>
