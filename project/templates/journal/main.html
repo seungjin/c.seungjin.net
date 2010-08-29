@@ -33,9 +33,8 @@
 			{{ journal.timezone }}
 		{% endif %}
 		{% if journal.tag != None %}
-			[{{ journal.tag }}]<br/>
-		{% endif %}
-		Link: <a href="http://{{ http_host }}/journal/{{ journal.id }}">http://{{ http_host }}/journal/{{ journal.id }}</a>
+			[{{ journal.tag }}]
+		{% endif %} (Link <a href="http://{{ http_host }}/journal/{{ journal.id }}">http://{{ http_host }}/journal/{{ journal.id }})</a>
 		</div>
 	{% endfor %}
 	<div id="footer">
