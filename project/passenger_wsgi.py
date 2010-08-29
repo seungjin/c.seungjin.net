@@ -2,12 +2,12 @@
 
 import sys, os
 
-INTERP = "/home/seungjin/webapps/c.seungjin.net/bin/python"
+INTERP = os.path.dirname(__file__) + "../bin/python"
 
 if sys.executable != INTERP:
   os.execl(INTERP, INTERP, *sys.argv)
 
-sys.path.append("/home/seungjin/webapps/c.seungjin.net/project")
+sys.path.append(os.path.dirname(__file__))
 
 os.environ['DJANGO_SETTINGS_MODULE'] = 'settings'
 
