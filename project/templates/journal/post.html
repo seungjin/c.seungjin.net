@@ -1,11 +1,36 @@
-
+<html>
+<head>
+  <title>SEUNG-JIN KIM</title>
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+  <!-- Copyright (C) 2005, 2006, 2007, 2008, 2009, 2010 seungjin.net -->
+  <!--link rel="alternate" type="application/rss+xml" href="/Journals/form=feed&amp;size=40" title="RSS Feed, seungjin.net" /-->
+  <meta name="date" content="{{ current_time }}">
+  <meta name="author" content="Kim, Seung-jin">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes" />
+  <link href="/site_media/journal/styles/main.css" rel="stylesheet" type="text/css">
+</head>
 <body>
 
 	<form method="post" style="padding-bottom:5px;">
 	  {% csrf_token %}
-    <input name="subject" type="text" style="width:80%; float:left; margin-left: 0px; margin-right: 5px;"></input>
+    <label>
+    subject
+    <input name="subject" type="text" style="width:80%; float:left; margin-left: 0px; margin-right: 5px;"/>
+    </label>
+		<br/>
+		<label>body</label>
 		<textarea name="message" rows="20rm" style="width:80%; float:left; margin-left: 0px; margin-right: 5px;" ></textarea>
+		<br/>
+		<label>tag</label>
+		<input name="tag" type="text" style="width:80%; float:left; margin-left: 0px; margin-right: 5px;"/>
+		<br/>
+		<label>ref</label>
+		<input name="ref" type="text" style="width:80%; float:left; margin-left: 0px; margin-right: 5px;"></input>
+		
     <input type=submit value="Shout!" class="submit" style="float:none; margin-left: 5px; margin-top: 2px;" />
 	</form>
 
 </body>
+</html>
