@@ -34,8 +34,8 @@
 		{% if journal.tag != None %}
 			[{{ journal.tag }}]
 		{% endif %}<br/>
-		{{ journal.subject }}<br/><br/>
-		Link <a href="http://{{ http_host }}/journal/{{ journal.id }}">http://{{ http_host }}/journal/{{ journal.id }}</a>
+		{{ journal.subject }}<br/>
+		<a href="http://{{ http_host }}/journal/{{ journal.id }}">http://{{ http_host }}/journal/{{ journal.id }}</a>
 		</div>
 	{% endfor %}
 	<div id="footer">
