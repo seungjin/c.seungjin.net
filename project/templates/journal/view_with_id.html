@@ -19,7 +19,8 @@
     <div id ='line'><hr/></div>
 	</div>
 	{% for journal in journals %}
-		<div id="journal">{{ journal.subject }}{% if journal.body != None %}{{ journal.body }}{% endif %}
+		<div id="journal">"{{ journal.subject }}"<br/>
+		{% if journal.body != None %}{{ journal.body }}{% endif %}
 		{% if journal.ref != None %}{{ journal.ref }}{% endif %}
 		{% if journal.date != None %}{{ journal.date }}{% endif %} {% if journal.time != None %}{{ journal.time }}{% endif %} {% if journal.timezone != None %} {{ journal.timezone }}{% endif %} {% if journal.tag != None %}[{{ journal.tag }}]{% endif %}
 		<a href="/journal">Journal list</a>
