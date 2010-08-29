@@ -1,4 +1,6 @@
-python 2.5.5, 
-Django-1.2.1, 
-virtualenv,
+python-2.5.5
+Django-1.2.1 
+virtualenv
 mysql5
+
+
