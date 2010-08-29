@@ -92,7 +92,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.messages',
-    'journals'
+    'journal'
     # Uncomment the next line to enable the admin:
     #'django.contrib.admin',
 )
