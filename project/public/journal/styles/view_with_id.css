@@ -30,8 +30,6 @@ body
 	height: 2px;
 }
 
-
-
 #journal
 {
 	background:#F4F5F7 3px 3px no-repeat;
@@ -42,34 +40,6 @@ body
   font-size: 100%;
 	white-space: pre-line;
 	word-wrap: break-word;
-}
-
-#read_order_updates
-{
-	font-size: 14px;
-	font-weight: bold;
-}
-
-#read_all_updates
-{
-	font-size: 14px;
-	font-weight: bold;
-}
-
-#rss_feed
-{
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-
-#ajax_loading_img
-{
-	display:none;
-}
-
-#bottom_line
-{
-	
 }
 
 
