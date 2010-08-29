@@ -92,6 +92,8 @@ class Journals(models.Model):
     created_at = models.DateTimeField(null=True, blank=True)
     class Meta:
         db_table = u'journals'
+    def time_with_min_sec(self):
+      return self.time.split(":")[0] + ":" + self.time.split(":")[1]
 
 class MyGeoips(models.Model):
     id = models.IntegerField(primary_key=True)
