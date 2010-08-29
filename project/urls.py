@@ -33,7 +33,8 @@ urlpatterns = patterns('',
 
     (r'^$', recent100),
 
-    (r'^journal/recent$', recent100),
+    (r'^journal/recent100$', recent100),
+    (r'^journal/all$', all),
     (r'^journal$', all),
     (r'^journal/(?P<id>\d+)/$', view_with_id),
 
