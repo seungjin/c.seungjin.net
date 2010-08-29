@@ -11,6 +11,7 @@ import os
 from django.conf import settings
 
 #from journal.views import *
+from journal import *
 
 site_media = os.path.join( os.path.dirname(__file__), 'public')
 
