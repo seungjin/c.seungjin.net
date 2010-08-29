@@ -39,7 +39,7 @@ body
 	margin:5px 0;
   line-height:120%;
   font-size: 100%;
-  white-space: pre-line;
+  white-space: normal;
 	word-wrap: break-word;
 }
 
