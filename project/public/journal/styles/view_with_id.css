@@ -31,6 +31,7 @@ body
 }
 
 
+
 #journal
 {
 	background:#F4F5F7 3px 3px no-repeat;
@@ -39,7 +40,7 @@ body
 	margin:5px 0;
   line-height:120%;
   font-size: 100%;
-  white-space: pre-line;
+	white-space: pre-line;
 	word-wrap: break-word;
 }
 
@@ -70,6 +71,7 @@ body
 {
 	
 }
+
 
 #footer
 {
