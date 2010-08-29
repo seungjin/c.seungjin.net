@@ -11,6 +11,7 @@ from journal.models import *
 def main(request):
   journals = Journals.objects.filter(publishing_code=1).order_by('-id').all()
   variables = Context({
+    'http_host' : request.META['HTTP_HOST'],
     'current_time' : strftime("%a, %d %b %Y %H:%M:%S +0000", gmtime()),
     'journals' : journals
   })

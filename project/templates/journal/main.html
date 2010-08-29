@@ -22,9 +22,9 @@
 	</div>
 	{% for journal in journals %}
 		<div id="journal">
-		{{ journal.subject }}<br/>
-		{{ journal.date }} {{ journal.time }} {{ journal.timezone }}<br/>
-		{{ journal.tag }}
+		{{ journal.subject }}<br/><br/>
+		{{ journal.date }} {{ journal.time }} {{ journal.timezone }}, [{{ journal.tag }}] <br/>
+		Link: <a href="http://{{ http_host }}/journal/{{ journal.id }}">http://{{ http_host }}/journal/{{ journal.id }}</a>
 		</div>
 	{% endfor %}
 	<div id="footer">
