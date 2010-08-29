@@ -12,7 +12,7 @@
  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes" />
  <link href="/site_media/journal/styles/main.css" rel="stylesheet" type="text/css">
  <script type="text/javascript" src="/site_media/journal/scripts/jquery-1.4.2.min.js"></script>
- <script type="text/javascript" src="/site_media/journal/scripts/main.js"></script>
+text/javascript" src="/site_media/journal/scripts/main.js"></script>
 </head>
 <body>
 	<div id='header'>
@@ -23,7 +23,18 @@
 	{% for journal in journals %}
 		<div id="journal">
 		{{ journal.subject }}<br/><br/>
-		{{ journal.date }} {{ journal.time }} {{ journal.timezone }}, [{{ journal.tag }}] <br/>
+		{% if journal.date != None %}
+			{{ journal.date }}
+		{% endif %}
+		{% if journal.time != None %}
+			{{ journal.time }}
+		{% endif %}
+		{% if journal.timezone != None %}
+			{{ journal.timezone }}
+		{% endif %}
+		{% if journal.tag != None %}
+			[{{ journal.tag }}]<br/>
+		{% endif %}
 		Link: <a href="http://{{ http_host }}/journal/{{ journal.id }}">http://{{ http_host }}/journal/{{ journal.id }}</a>
 		</div>
 	{% endfor %}
