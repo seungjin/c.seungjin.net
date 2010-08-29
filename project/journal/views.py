@@ -6,6 +6,10 @@ from django.template.loader import get_template
 
 from time import gmtime, strftime, localtime, tzname
 
+from django.core.context_processors import csrf
+from django.shortcuts import render_to_response
+
+
 from journal.models import *
 
 def access_log(request):
@@ -60,6 +64,32 @@ def view_with_id(request, id):
   return HttpResponse(output)
 
 def post(request):
-  return HttpResponse("-")
-  
+  if request.POST.has_key('subject') :
+    subject = request.POST['subject']
+  else :
+    subject = None
+  if request.POST.has_key('message') :
+    message = request.POST['message']
+  else :
+    message = None
+  if subject != None :
+    journal = Journals(
+      date = strftime("%Y-%m-%d",localtime()),
+      time = strftime("%H:%M:%S",localtime()),
+      timezone = tzname[0],
+      tag = "Scratch",
+      subject = subject,
+      publishing_code = 1,
+      body = message,
+      ref = None,
+      created_at = strftime("%Y-%m-%d %H:%M:%S",localtime())
+    )
+    journal.save()
+  c = {}
+  c.update(csrf(request))
+  template = get_template('journal/post.html')
+  variables = Context({ })
+  output = template.render(variables)
+  #return HttpResponse(output,c)
+  return render_to_response('journal/post.html',c)
   

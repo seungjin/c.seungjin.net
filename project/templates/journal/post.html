@@ -1,0 +1,11 @@
+
+<body>
+
+	<form method="post" style="padding-bottom:5px;">
+	  {% csrf_token %}
+    <input name="subject" type="text" style="width:80%; float:left; margin-left: 0px; margin-right: 5px;"></input>
+		<textarea name="message" rows="20rm" style="width:80%; float:left; margin-left: 0px; margin-right: 5px;" ></textarea>
+    <input type=submit value="Shout!" class="submit" style="float:none; margin-left: 5px; margin-top: 2px;" />
+	</form>
+
+</body>
