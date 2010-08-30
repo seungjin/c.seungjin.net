@@ -40,18 +40,6 @@ def all(request):
   output = template.render(variables)
   return HttpResponse(output)
 
-#def recent100(request):
-#  access_log(request)
-#  journals = Journals.objects.filter(publishing_code=1).order_by('-id').all()[0:100]
-#  variables = Context({
-#    'http_host' : request.META['HTTP_HOST'],
-#    'current_time' : strftime("%a, %d %b %Y %H:%M:%S +0000", gmtime()),
-#    'journals' : journals
-#  })
-#  template = get_template('journal/main.html')
-#  output = template.render(variables)
-#  return HttpResponse(output)
-
 def recent(request,size=None):
   access_log(request)
   if size == None : size = 100
