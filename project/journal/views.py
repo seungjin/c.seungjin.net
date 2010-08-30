@@ -52,7 +52,7 @@ def all(request):
 #  output = template.render(variables)
 #  return HttpResponse(output)
 
-def recent(request.size):
+def recent(request,size):
   access_log(request)
   journals = Journals.objects.filter(publishing_code=1).order_by('-id').all()[0:size]
   variables = Context({
