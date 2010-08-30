@@ -36,6 +36,9 @@
 		{% endif %}<br/>
 		{{ journal.subject }}{% if journal.ref != None %} <a href="{{ journal.ref }}">{{ journal.ref }}</a>{% endif %}<br/>
 		<a href="http://{{ http_host }}/journal/{{ journal.id }}">http://{{ http_host }}/journal/{{ journal.id }}</a>
+		{% if journal.body != None %}
+			(긴글이 있습니다.)
+		{% endif %}
 		</div>
 	{% endfor %}
 	<a href="/journal/all">View all</a>
