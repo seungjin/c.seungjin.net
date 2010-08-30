@@ -54,7 +54,7 @@ def all(request):
 
 def recent(request,size):
   access_log(request)
-  if size = None : size = 100
+  if size == None : size = 100
   journals = Journals.objects.filter(publishing_code=1).order_by('-id').all()[0:size]
   variables = Context({
     'http_host' : request.META['HTTP_HOST'],
