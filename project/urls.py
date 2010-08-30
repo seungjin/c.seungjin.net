@@ -32,8 +32,7 @@ urlpatterns = patterns('',
 
     (r'^site_media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': site_media}),
 
-    (r'^$', 'django.views.generic.simple.redirect_to', {'url': '/journal/recent/100'}),
-    
+    (r'^$', 'django.views.generic.simple.redirect_to', {'url': '/journal'}),
     (r'^journal/recent$', 'django.views.generic.simple.redirect_to', {'url': '/journal/recent/100'}),
     (r'^journal/recent/(?P<size>\d+)/$', recent),
     
