@@ -52,7 +52,7 @@ def all(request):
 #  output = template.render(variables)
 #  return HttpResponse(output)
 
-def recent(request,size):
+def recent(request,size=None):
   access_log(request)
   if size == None : size = 100
   journals = Journals.objects.filter(publishing_code=1).order_by('-id').all()[0:size]
