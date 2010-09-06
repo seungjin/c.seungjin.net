@@ -20,17 +20,6 @@ class AccessLogs(models.Model):
     class Meta:
         db_table = u'access_logs'
 
-class DailyPhotoStream(models.Model):
-    id = models.IntegerField(primary_key=True)
-    updated_at = models.DateTimeField(null=True, blank=True)
-    description = models.CharField(max_length=768, blank=True)
-    photo_path = models.CharField(max_length=768, blank=True)
-    photo_blob = models.TextField(blank=True)
-    photo_thumbnail_path = models.CharField(max_length=768, blank=True)
-    photo_thunbnail_blob = models.TextField(blank=True)
-    class Meta:
-        db_table = u'daily_photo_stream'
-
 class EmailReceived(models.Model):
     id = models.IntegerField(primary_key=True)
     status = models.CharField(max_length=21)

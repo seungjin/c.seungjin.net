@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+<head>
+ <title>SEUNG-JIN KIM</title>
+ <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+ <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+ <!-- Copyright (C) 2005, 2006, 2007, 2008, 2009, 2010 seungjin.net -->
+ <!--link rel="alternate" type="application/rss+xml" href="/Journals/form=feed&amp;size=40" title="RSS Feed, seungjin.net" /-->
+ <meta name="date" content="{{ current_time }}">
+ <meta name="author" content="Kim, Seung-jin">
+ <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes" />
+ <link href="/site_media/journal/styles/main.css" rel="stylesheet" type="text/css">
+ <script type="text/javascript" src="/site_media/journal/scripts/jquery-1.4.2.min.js"></script>
+ <script tupe="text/javascript" src="/site_media/journal/scripts/main.js"></script>
+</head>
+<body>
+	<div id='header'>
+	  <img src='/site_media/journal/images/seungjin.net.small.white.png' />
+    <img src='/site_media/journal/images/ribbon.png' height=22 />
+    <div id ='line'><hr/></div>
+	</div>
+	{% for journal in journals %}
+		<div id="journal">
+		{% if journal.date != None %}
+			{{ journal.date }}
+		{% endif %}
+		{% if journal.time != None %}
+			{{ journal.time_with_min_sec }}
+		{% endif %}
+		{% if journal.timezone != None %}
+			{{ journal.timezone }}
+		{% endif %}
+		{% if journal.tag != None %}
+			[{{ journal.tag }}]
+		{% endif %}<br/>
+		{{ journal.subject }}{% if journal.ref != None %} <a href="{{ journal.ref }}">{{ journal.ref }}</a>{% endif %}<br/>
+		<a href="http://{{ http_host }}/journal/{{ journal.id }}">http://{{ http_host }}/journal/{{ journal.id }}</a>
+		{% if journal.body != None %}
+			(긴글이 있습니다.)
+		{% endif %}
+		</div>
+	{% endfor %}
+	<a href="/journal/all">View all</a>
+	<div id="footer">
+		<div id="bottom_line"><hr/></div>
+	</div>
+</body>
+</html>

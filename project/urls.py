@@ -11,7 +11,7 @@ import os
 from django.conf import settings
 
 from journal.views import *
-
+from picture.views import *
 
 site_media = os.path.join( os.path.dirname(__file__), 'public')
 
@@ -39,6 +39,9 @@ urlpatterns = patterns('',
     (r'^journal/all$', all),
     (r'^journal$', all),
     (r'^journal/(?P<id>\d+)/$', view_with_id),
+    
+    (r'^picture/(?P<id>\d+)/$', view_with_id),
+    
 
     #(r'^post/journal$', post),
 )
