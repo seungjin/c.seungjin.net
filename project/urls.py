@@ -10,8 +10,9 @@ import os
 
 from django.conf import settings
 
-from journal.views import *
-from picture.views import *
+from journal import views as journal_views
+from picture import views as picture_views
+
 
 site_media = os.path.join( os.path.dirname(__file__), 'public')
 
@@ -32,15 +33,15 @@ urlpatterns = patterns('',
 
     (r'^site_media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': site_media}),
 
-    (r'^$', recent),
+    (r'^$', journal_views.recent),
     (r'^journal/recent$', 'django.views.generic.simple.redirect_to', {'url': '/journal/recent/100'}),
-    (r'^journal/recent/(?P<size>\d+)/$', recent),
+    (r'^journal/recent/(?P<size>\d+)/$', journal_views.recent),
     
-    (r'^journal/all$', all),
-    (r'^journal$', all),
-    (r'^journal/(?P<id>\d+)/$', view_with_id),
+    (r'^journal/all$', journal_views.all),
+    (r'^journal$', journal_views.all),
+    (r'^journal/(?P<id>\d+)/$', journal_views.view_with_id),
     
-    (r'^picture/(?P<id>\d+)/$', view_with_id),
+    (r'^picture/(?P<id>\d+)/$', picture_views.view_with_id),
     
 
     #(r'^post/journal$', post),
