@@ -27,42 +27,13 @@ def access_log(request):
   )
   acessLog.save()
 
-def all(request):
-  access_log(request)
-  journals = Journals.objects.filter(publishing_code=1).order_by('-id').all()
-  variables = Context({
-    'http_host' : request.META['HTTP_HOST'],
-    'current_time' : strftime("%a, %d %b %Y %H:%M:%S +0000", gmtime()),
-    'journals' : journals
-  })
-  template = get_template('picture/main.html')
-  output = template.render(variables)
-  return HttpResponse(output)
-
-def recent(request,size=None):
-  access_log(request)
-  if size == None : size = 100
-  journals = Journals.objects.filter(publishing_code=1).order_by('-id').all()[0:size]
-  variables = Context({
-    'http_host' : request.META['HTTP_HOST'],
-    'current_time' : strftime("%a, %d %b %Y %H:%M:%S +0000", gmtime()),
-    'journals' : journals
-  })
-  template = get_template('picture/main.html')
-  output = template.render(variables)
-  return HttpResponse(output)
-  
 def view_with_id(request, id):
   access_log(request)
   pictures = Pictures.objects.filter(publishing_code=1).filter(id=id).order_by('-id').all()
+
+  if pictures.count() == 0 :
+    return HttpResponse("image not available")
   
-  #variables = Context({
-  #  'current_time' : strftime("%a, %d %b %Y %H:%M:%S +0000", gmtime()),
-  #  'pictures' : pictures
-  #})
-  #template = get_template('picture/view_with_id.html')
-  #output = template.render(variables)
-  #return HttpResponse(output)
   response = HttpResponse(pictures[0].image_blob)
   response['Content-Type'] = pictures[0].content_type
   response['Cache-Control'] = 'max-age=7200'
